@@ -1,6 +1,20 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+var getBase64 = function getBase64(file) {
+  return new Promise(function (resolve, reject) {
+    var reader = new FileReader();
+    reader.readAsDataURL(file);
+
+    reader.onload = function () {
+      return resolve(reader.result);
+    };
+
+    reader.onerror = function (error) {
+      return reject(error);
+    };
+  });
+};
 
 const randomAsync = (i) => {
   let foo = Math.floor((Math.random() * 40) + 1)

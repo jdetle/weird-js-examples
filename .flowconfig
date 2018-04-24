@@ -1,0 +1,16 @@
+[ignore]
+<PROJECT_ROOT>/node_modules/editions
+<PROJECT_ROOT>/node_modules/protobufjs/src
+.*/*.json/.*
+.*/.git/.*
+[include]
+./src
+[libs]
+./custom_definitions/
+./types
+flow-typed
+[lints]
+
+[options]
+
+[strict]
